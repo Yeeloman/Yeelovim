@@ -25,16 +25,17 @@ opt.colorcolumn = "0"
 opt.signcolumn = "yes"
 opt.cmdheight = 1
 opt.scrolloff = 10
-opt.completeopt = "menuone,noinsert,noselect,preview"
+opt.completeopt = "menuone,noinsert,noselect"
 opt.laststatus = 2
 opt.showmatch = true
 opt.cursorline = true
 opt.cursorcolumn = true
-opt.wildmode = "longest,list,full"
 opt.linebreak = true
 opt.showbreak = "+++"
 opt.ruler = true
 opt.list = true
+opt.wildmode = { 'longest', 'list', 'full' }
+
 
 -- Behaviour
 opt.hidden = true
