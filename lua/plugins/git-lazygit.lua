@@ -2,6 +2,6 @@
 -- for more informations
 return {
   "kdheepak/lazygit.nvim",
-  lazy = false,
+  event = "VeryLazy",
   vim.keymap.set('n', '<leader>gg', ":LazyGit<CR>", { noremap = true, silent = true }),
 }

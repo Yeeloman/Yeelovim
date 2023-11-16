@@ -2,7 +2,7 @@
 -- for more informations
 return {
   'lewis6991/gitsigns.nvim',
-  lazy = false,
+  event = "VeryLazy",
   config = function()
     require('gitsigns').setup({
       signs = {

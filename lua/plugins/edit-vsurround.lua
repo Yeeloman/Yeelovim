@@ -2,5 +2,5 @@
 -- for more information check https://github.com/tpope/vim-surround
 return {
   'tpope/vim-surround',
-  lazy = false,
+  event = "VeryLazy",
 }
