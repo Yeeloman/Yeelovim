@@ -2,10 +2,11 @@
 -- for more informations
 return {
   'lewis6991/gitsigns.nvim',
+  lazy = false,
   config = function()
     require('gitsigns').setup({
       signs = {
-        add          = { text = '│' },
+        add          = { text = '+' },
         change       = { text = '│' },
         delete       = { text = '_' },
         topdelete    = { text = '‾' },
@@ -14,7 +15,8 @@ return {
       },
       signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
       numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
-      linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+      linehl     = true, -- Toggle with `:Gitsigns toggle_linehl`
+      -- njdznjdql
       word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
       watch_gitdir = {
         follow_files = true
@@ -45,5 +47,7 @@ return {
         enable = false
       },
     })
-  end
+  end,
+  vim.keymap.set('n', '<leader>gp', ":Gitsigns preview_hunk<CR>", { noremap = true, silent = true }),
+  vim.keymap.set('n', '<leader>gd', ":Gitsigns diffthis<CR>", { noremap = true, silent = true }),
 }
