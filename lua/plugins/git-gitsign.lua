@@ -49,4 +49,5 @@ return {
   end,
   vim.keymap.set('n', '<leader>gp', ":Gitsigns preview_hunk<CR>", { noremap = true, silent = true }),
   vim.keymap.set('n', '<leader>gd', ":Gitsigns diffthis<CR>", { noremap = true, silent = true }),
+  vim.keymap.set('n', '<leader>gl', ":Gitsigns toggle_linehl<CR>", { noremap = true, silent = true }),
 }
