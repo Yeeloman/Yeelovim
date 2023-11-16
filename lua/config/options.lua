@@ -34,7 +34,7 @@ opt.linebreak = true
 opt.showbreak = "+++"
 opt.ruler = true
 opt.list = true
-opt.wildmode = { 'longest', 'list', 'full' }
+opt.wildmode = "longest,list,full"
 
 
 -- Behaviour
