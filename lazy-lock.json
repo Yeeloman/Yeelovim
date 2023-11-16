@@ -10,6 +10,7 @@
   "gitsigns.nvim": { "branch": "main", "commit": "af0f583cd35286dd6f0e3ed52622728703237e50" },
   "hlchunk.nvim": { "branch": "main", "commit": "49acbd55506ea8200b5a4b5f1877f10b4a806f2d" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
+  "lazygit.nvim": { "branch": "main", "commit": "de35012036d43bca03628d40d083f7c02a4cda3f" },
   "leap.nvim": { "branch": "main", "commit": "b6ae80f8fc9993638608fc1a51c6ab0eeb12618c" },
   "miasma.nvim": { "branch": "main", "commit": "c672feec07d4e77ac485ee58e3432a96ebe51953" },
   "momiji": { "branch": "main", "commit": "d895ea7ac870846e5dfb2156ebe727e8cb594e26" },
