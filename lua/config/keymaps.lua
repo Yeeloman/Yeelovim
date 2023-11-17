@@ -25,3 +25,6 @@ keymap.set('v', '>', '>gv')
 -- buffer manipulation
 keymap.set('n', '<leader>bd', ':bdelete<CR>')
 keymap.set('n', '<leader>bD', ':bdelete!<CR>')
+
+-- open a new file
+keymap.set('n', '<leader>bn', ':enew<CR>')

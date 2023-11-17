@@ -32,6 +32,10 @@ local config = function()
         theme = "ivy",
         previewer = true,
       },
+      spell_suggest = {
+        theme = "cursor",
+        previewer = true,
+      },
 		},
 	})
 end
@@ -42,14 +46,16 @@ return {
 	lazy = false,
 	dependencies = { "nvim-lua/plenary.nvim" },
   config = config,
-  vim.api.nvim_set_keymap('n', '<Leader>ff', ':Telescope find_files<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>fb', ':Telescope buffers<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>fg', ':Telescope live_grep<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>fo', ':Telescope oldfiles<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>ft', ':Telescope colorscheme<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>fr', ':Telescope registers<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>fvo', ':Telescope vim_options<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>fts', ':Telescope treesitter<CR>', { noremap = true, silent = true }),
-  vim.api.nvim_set_keymap('n', '<Leader>fn', ':Telescope notify<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tf', ':Telescope find_files<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tb', ':Telescope buffers<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tg', ':Telescope live_grep<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>to', ':Telescope oldfiles<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tt', ':Telescope colorscheme<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tr', ':Telescope registers<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tvo', ':Telescope vim_options<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tts', ':Telescope treesitter<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tn', ':Telescope notify<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>ts', ':Telescope spell_suggest<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tzf', ':Telescope current_buffer_fuzzy_find<CR>', { noremap = true, silent = true }),
 }
 
