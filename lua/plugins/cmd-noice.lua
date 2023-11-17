@@ -38,6 +38,20 @@ return {
 			config = function()
 				require("notify").setup({
 					background_colour = "#000000",
+          fps = 30,
+          icons = {
+            DEBUG = "",
+            ERROR = "",
+            INFO = "",
+            TRACE = "✎",
+            WARN = ""
+          },
+          level = 2,
+          minimum_width = 10,
+          render = "minimal",
+          stages = "fade_in_slide_out",
+          timeout = 10,
+          top_down = true
 				})
 			end,
 		},
