@@ -5,7 +5,9 @@ return  {
   lazy = false,
   cmd = { 'SessionSave', 'SessionDelete', 'SessionLoad'},
   config = function()
-    require('dbsession').setup({})
+    require('dbsession').setup({
+      auto_save_on_exit = true,
+    })
   end,
   -- for a quick session 
   vim.keymap.set('n', '<leader>ss', ":SessionSave default<CR>", { noremap = true, silent = true }),
