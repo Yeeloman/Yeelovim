@@ -51,7 +51,7 @@ return {
 	lazy = false,
 	dependencies = { "nvim-lua/plenary.nvim" },
   config = config,
-  vim.api.nvim_set_keymap('n', '<Leader>tf', ':Telescope find_files<CR>', { noremap = true, silent = true }),
+  vim.api.nvim_set_keymap('n', '<Leader>tff', ':Telescope find_files<CR>', { noremap = true, silent = true }),
   vim.api.nvim_set_keymap('n', '<Leader>tb', ':Telescope buffers<CR>', { noremap = true, silent = true }),
   vim.api.nvim_set_keymap('n', '<Leader>tg', ':Telescope live_grep<CR>', { noremap = true, silent = true }),
   vim.api.nvim_set_keymap('n', '<Leader>to', ':Telescope oldfiles<CR>', { noremap = true, silent = true }),
