@@ -1,7 +1,13 @@
 local keymap = vim.keymap
-
+local opts = {}
 -- source init file
 keymap.set('n', '<F2>', ':source ~/.config/nvim/init.lua<CR>', opts)
+
+-- to navigate in insert mode using ctr hjkl
+keymap.set('i', '<C-h>', '<C-o>h', opts)
+keymap.set('i', '<C-l>', '<C-o>l', opts)
+keymap.set('i', '<C-j>', '<C-o>j', opts)
+keymap.set('i', '<C-k>', '<C-o>k', opts)
 
 -- set a keymap for lazy
 keymap.set('n', '<Leader>l', ':Lazy<CR>', { noremap = true, silent = true })
@@ -28,3 +34,6 @@ keymap.set('n', '<leader>bD', ':bdelete!<CR>')
 
 -- open a new file
 keymap.set('n', '<leader>bn', ':enew<CR>')
+
+-- buffer picker
+keymap.set('n', '<leader>bp', ':BufferPick<CR>')
