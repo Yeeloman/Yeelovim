@@ -1,5 +1,6 @@
 -- check https://github.com/williamboman/mason-lspconfig.nvim
 -- for more informations
+-- and for each language server added add the configs from https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#pyright
 local on_attach = require("util.lspkeymap").on_attach
 local diagnostic_signs = require("util.lspkeymap").diagnostic_signs
 
@@ -23,14 +24,16 @@ local config = function()
 			Lua = {
 				-- make the language server recognize "vim" global
 				diagnostics = {
+          disable = true,  -- Add this line to fix missing field
+          disableScheme = true,
 					globals = { "vim" },
 				},
 				workspace = {
 					--[[ make language server aware of runtime files ]]
-					-- library = {
-     --        [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-					-- 	[vim.fn.stdpath("config") .. "/lua"] = true,
-					-- },
+					library = {
+            -- checkThirdParty = false,
+            vim.env.VIMRUNTIME,
+					},
 				},
 			},
 		},
