@@ -2,7 +2,7 @@
 -- for more informations
 return {
 	"xiyaowong/transparent.nvim",
-	lazy = false,
+	lazy = true,
 	config = function()
 		vim.cmd([[hi StatusLine ctermbg=0 cterm=NONE]])
 		require("transparent").setup({ -- Optional, you don't have to run setup.
