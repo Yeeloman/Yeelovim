@@ -1,9 +1,9 @@
 -- main entry for conf
-require('config')
+require("config")
 
 -- to set the colorscheme
 -- new themes to be added in /lua/plugins/themes.lua
-vim.cmd("colorscheme space-vim-dark")
+vim.cmd("colorscheme dark_flat")
 
 -- change line nnumber colors
 vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#FF00BF" })

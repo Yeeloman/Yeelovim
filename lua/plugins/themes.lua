@@ -11,4 +11,7 @@ return {
 	  { "catppuccin/nvim", as = "catppuccin" },
 	  { "xero/miasma.nvim" },
 	  { "maxmx03/dracula.nvim" },
+    { "Abstract-IDE/Abstract-cs" },
+    { 'ribru17/bamboo.nvim' },
+    { "sekke276/dark_flat.nvim" },
   }
