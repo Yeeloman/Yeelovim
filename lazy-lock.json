@@ -27,6 +27,7 @@
   "hardtime.nvim": { "branch": "main", "commit": "ddf9c8d1028ce318e8c6a0acece6bad31b6f49c5" },
   "hlchunk.nvim": { "branch": "main", "commit": "8b3bfc331eeb62e6105b2fdb51b460f7423c6ec7" },
   "hlsearch.nvim": { "branch": "main", "commit": "40a590d0720bb08be2a5bdf668d3f85b5b824162" },
+  "iswap.nvim": { "branch": "master", "commit": "e05889db694524f68eb69567a70a98470994b890" },
   "lazy.nvim": { "branch": "main", "commit": "96584866b9c5e998cbae300594d0ccfd0c464627" },
   "lazygit.nvim": { "branch": "main", "commit": "de35012036d43bca03628d40d083f7c02a4cda3f" },
   "leap.nvim": { "branch": "main", "commit": "b6ae80f8fc9993638608fc1a51c6ab0eeb12618c" },
