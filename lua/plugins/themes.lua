@@ -1,9 +1,8 @@
 return {
-	  { "liuchengxu/space-vim-dark" },
+	  -- { "liuchengxu/space-vim-dark" },
 	  { "sjl/badwolf" },
 	  { "sainnhe/everforest" },
 	  { "cseelus/vim-colors-lucid" },
-	  { "liuchengxu/space-vim-dark" },
 	  { "challenger-deep-theme/vim" },
 	  { "ayu-theme/ayu-vim" },
 	  { "kyoh86/momiji" },
