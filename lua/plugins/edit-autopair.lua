@@ -1,5 +1,10 @@
--- plugin for auto paring
+-- check https://github.com/altermo/ultimate-autopair.nvim
+-- for more informations
 return {
-  'LunarWatcher/auto-pairs',
-  lazy = false,
+	"altermo/ultimate-autopair.nvim",
+	event = { "InsertEnter", "CmdlineEnter" },
+	branch = "v0.6", --recomended as each new version will have breaking changes
+	opts = {
+		--Config goes here
+	},
 }
