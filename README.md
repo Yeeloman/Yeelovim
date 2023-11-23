@@ -43,3 +43,5 @@ I'll add the list of plugins later
 * finally make a better readme than this one
 
 #### theres an error that displays sometimes when opening a lua file, still cant figure out how to fix it, if you have any idea hit me up THANK YOU.
+
+inspired by [The Rad Lectures](https://www.youtube.com/watch?v=ZjMzBd1Dqz8)
