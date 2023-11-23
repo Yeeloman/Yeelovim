@@ -36,8 +36,8 @@ keymap.set("n", "<leader>bD", ":bdelete!<CR>")
 keymap.set("n", "<leader>bn", ":enew<CR>")
 
 -- move selected lines
-keymap.set("n", "<A-J>", ":move +1<CR>")
-keymap.set("n", "<A-K>", ":move -2<CR>")
+-- keymap.set("n", "<A-J>", ":move +1<CR>")
+-- keymap.set("n", "<A-K>", ":move -2<CR>")
 
 -- buffer picker
 keymap.set("n", "<leader>bp", ":BufferPick<CR>")
