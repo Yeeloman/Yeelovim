@@ -29,7 +29,8 @@ keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")
 
 -- buffer manipulation
-keymap.set("n", "<leader>bd", ":bdelete<CR>")
+keymap.set("n", "<leader>bc", ":BufferClose<CR>")
+keymap.set("n", "<leader>ba", ":BufferCloseAllButCurrentOrPinned<CR>")
 keymap.set("n", "<leader>bD", ":bdelete!<CR>")
 
 -- open a new file
