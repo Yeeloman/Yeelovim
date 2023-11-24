@@ -12,7 +12,7 @@ return
       hint = true,
       notification = true,
       allow_different_key = false,
-      enabled = false,
+      enabled = true,
       disabled_keys = {
         ["<Up>"] = { "n" },
         ["<Down>"] = { "n" },
