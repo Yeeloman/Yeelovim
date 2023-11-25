@@ -52,7 +52,7 @@ opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 opt.encoding = "UTF-8"
-opt.showmode = true
+opt.showmode = false
 opt.showcmd = true
 opt.autoread = true
 opt.background = "dark"
