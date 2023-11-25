@@ -1,5 +1,6 @@
 {
   "Abstract-cs": { "branch": "main", "commit": "07475aa22943dc25080239c8cab613ab0a2945df" },
+  "Colorizer": { "branch": "master", "commit": "9a24670a9fe610ba4b6bd104e340a0d11616f8c0" },
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "LuaSnip": { "branch": "master", "commit": "1f4ad8bb72bdeb60975e98652636b991a9b7475d" },
   "NeoComposer.nvim": { "branch": "main", "commit": "315a8f0199ba55ae57064bf606215d39769cd1ed" },

@@ -36,7 +36,6 @@ opt.ruler = true
 opt.list = true
 opt.wildmode = "longest,list,full"
 
-
 -- Behaviour
 opt.hidden = true
 opt.errorbells = true
@@ -56,20 +55,23 @@ opt.encoding = "UTF-8"
 opt.showmode = true
 opt.showcmd = true
 opt.autoread = true
-opt.background = 'dark'
+opt.background = "dark"
 opt.guicursor = "n-v-c:block,i-ci-ve:block"
-vim.api.nvim_exec([[
+vim.api.nvim_exec(
+	[[
   augroup MyCursorShapes
     autocmd!
     autocmd InsertEnter * set guicursor=n-v-c:ver25,i-ci-ve:ver25
     autocmd InsertLeave * set guicursor=n-v-c:block,i-ci-ve:block
     autocmd VimLeave * set guicursor=n-v-c:block,i-ci-ve:block
   augroup END
-]], false)
+]],
+	false
+)
 -- Restore cursor position
 vim.api.nvim_create_autocmd({ "BufReadPost" }, {
-    pattern = { "*" },
-    callback = function()
-        vim.api.nvim_exec('silent! normal! g`"zv', false)
-    end,
+	pattern = { "*" },
+	callback = function()
+		vim.api.nvim_exec('silent! normal! g`"zv', false)
+	end,
 })
