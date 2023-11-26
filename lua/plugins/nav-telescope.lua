@@ -43,6 +43,7 @@ local config = function()
 		},
 	})
 	require("telescope").load_extension("file_browser")
+	require("telescope").load_extension("themes")
 end
 
 return {
@@ -55,7 +56,7 @@ return {
 	vim.api.nvim_set_keymap("n", "<Leader>tb", ":Telescope buffers<CR>", { noremap = true, silent = true }),
 	vim.api.nvim_set_keymap("n", "<Leader>tg", ":Telescope live_grep<CR>", { noremap = true, silent = true }),
 	vim.api.nvim_set_keymap("n", "<Leader>to", ":Telescope oldfiles<CR>", { noremap = true, silent = true }),
-	vim.api.nvim_set_keymap("n", "<Leader>tc", ":Telescope colorscheme<CR>", { noremap = true, silent = true }),
+	vim.api.nvim_set_keymap("n", "<Leader>tc", ":Telescope themes<CR>", { noremap = true, silent = true }),
 	vim.api.nvim_set_keymap("n", "<Leader>tr", ":Telescope registers<CR>", { noremap = true, silent = true }),
 	vim.api.nvim_set_keymap("n", "<Leader>tvo", ":Telescope vim_options<CR>", { noremap = true, silent = true }),
 	vim.api.nvim_set_keymap("n", "<Leader>tts", ":Telescope treesitter<CR>", { noremap = true, silent = true }),
