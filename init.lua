@@ -1,13 +1,19 @@
 -- main entry for conf
 require("config")
 
-require("themer").setup({
-	colorscheme = "tokyodark",
-	transparent = false,
-	dim_inactive = true,
-})
+-- vim.cmd("colorscheme cyberdream")
+-- require("themer").setup({
+-- 	colorscheme = "",
+-- 	transparent = false,
+-- 	dim_inactive = true,
+-- })
 
 -- change line nnumber colors
-vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#FF00BF" })
--- vim.api.nvim_set_hl(0, "LineNr", { fg = "red" })
-vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#00F9FF" })
+vim.api.nvim_set_hl(0, "linenrabove", { fg = "#ff00bf" })
+-- vim.api.nvim_set_hl(0, "linenr", { fg = "red" })
+vim.api.nvim_set_hl(0, "linenrbelow", { fg = "#00f9ff" })
+
+-- guibg=#7108BF
+vim.cmd([[
+  hi visual guifg=#ffffff
+]])

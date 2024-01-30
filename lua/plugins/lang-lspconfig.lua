@@ -24,35 +24,34 @@ local config = function()
 			Lua = {
 				-- make the language server recognize "vim" global
 				diagnostics = {
-          disable = true,  -- Add this line to fix missing field
-          disableScheme = true,
+					disable = true, -- Add this line to fix missing field
+					disableScheme = true,
 					globals = { "vim" },
 				},
 				workspace = {
 					--[[ make language server aware of runtime files ]]
 					library = {
-            -- checkThirdParty = false,
-            vim.env.VIMRUNTIME,
+						-- checkThirdParty = false,
+						vim.env.VIMRUNTIME,
 					},
 				},
 			},
 		},
 	})
 
-  lspconfig.efm.setup({
-    filetypes = { "lua" },  -- Add more filetypes as needed
-    init_options = { documentFormatting = true },
-    settings = {
-        rootMarkers = { ".git/" },  -- Adjust this based on your project
-        languages = {
-            lua = {
-                { formatCommand = "lua-format -i", formatStdin = true },
-            },
-            -- Add more language configurations as needed
-        },
-    },
-})
-
+	lspconfig.efm.setup({
+		filetypes = { "lua" }, -- Add more filetypes as needed
+		init_options = { documentFormatting = true },
+		settings = {
+			rootMarkers = { ".git/" }, -- Adjust this based on your project
+			languages = {
+				lua = {
+					{ formatCommand = "lua-format -i", formatStdin = true },
+				},
+				-- Add more language configurations as needed
+			},
+		},
+	})
 
 	-- json
 	lspconfig.jsonls.setup({
@@ -136,6 +135,23 @@ local config = function()
 		},
 	})
 
+	-- html
+	lspconfig.html.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
+	-- css
+	lspconfig.cssls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
+
+	-- Rust
+	lspconfig.rust_analyzer.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+	})
+
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
@@ -149,6 +165,8 @@ local config = function()
 	local solhint = require("efmls-configs.linters.solhint")
 	local cpplint = require("efmls-configs.linters.cpplint")
 	local clangformat = require("efmls-configs.formatters.clang_format")
+	-- local htmlbeautifier = require("efmls-configs.formatters.htmlbeautifier")
+	-- local htmlhint = require("efmls-configs.linters.htmlhint")
 
 	-- configure efm server
 	lspconfig.efm.setup({
@@ -171,6 +189,7 @@ local config = function()
 			"css",
 			"c",
 			"cpp",
+			"rust",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -197,6 +216,7 @@ local config = function()
 				docker = { hadolint, prettier_d },
 				solidity = { solhint },
 				html = { prettier_d },
+				-- html = { htmlhint, htmlbeautifier },
 				css = { prettier_d },
 				c = { clangformat, cpplint },
 				cpp = { clangformat, cpplint },
@@ -215,6 +235,6 @@ return {
 		"hrsh7th/nvim-cmp",
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-path",
+		"hrsh7th/cmp-path",
 	},
 }

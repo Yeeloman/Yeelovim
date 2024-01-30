@@ -4,14 +4,14 @@ return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	opts = {
-    cmdline = {
-      view = "cmdline", --hover, cmdline, cmdline_popup, mini, confirm, virtualtext
-    },
-    popupmenu = {
-      enabled = true, -- enables the Noice popupmenu UI
-      ---@type 'nui'|'cmp'
-      backend = "nui", -- backend to use to show regular cmdline completions
-    },
+		cmdline = {
+			view = "hover", --hover, cmdline, cmdline_popup, mini, confirm, virtualtext
+		},
+		popupmenu = {
+			enabled = true, -- enables the Noice popupmenu UI
+			---@type 'nui'|'cmp'
+			backend = "nui", -- backend to use to show regular cmdline completions
+		},
 		routes = {
 			{
 				view = "notify",
@@ -38,7 +38,7 @@ return {
 	dependencies = {
 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 		"MunifTanjim/nui.nvim",
-    "tree-sitter/tree-sitter-regex",
+		"tree-sitter/tree-sitter-regex",
 		-- OPTIONAL:
 		--   `nvim-notify` is only needed, if you want to use the notification view.
 		--   If not available, we use `mini` as the fallback
@@ -47,20 +47,20 @@ return {
 			config = function()
 				require("notify").setup({
 					background_colour = "#000000",
-          fps = 30,
-          icons = {
-            DEBUG = "",
-            ERROR = "",
-            INFO = "",
-            TRACE = "✎",
-            WARN = ""
-          },
-          level = 2,
-          minimum_width = 10,
-          render = "minimal",
-          stages = "fade_in_slide_out",
-          timeout = 10,
-          top_down = true
+					fps = 30,
+					icons = {
+						DEBUG = "",
+						ERROR = "",
+						INFO = "",
+						TRACE = "✎",
+						WARN = "",
+					},
+					level = 2,
+					minimum_width = 10,
+					render = "minimal",
+					stages = "fade_in_slide_out",
+					timeout = 20,
+					top_down = true,
 				})
 			end,
 		},
