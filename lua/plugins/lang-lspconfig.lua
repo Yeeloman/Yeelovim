@@ -152,6 +152,13 @@ local config = function()
 		on_attach = on_attach,
 	})
 
+	--golang
+	lspconfig.gopls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		filetypes = { "go" },
+	})
+
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
@@ -165,6 +172,8 @@ local config = function()
 	local solhint = require("efmls-configs.linters.solhint")
 	local cpplint = require("efmls-configs.linters.cpplint")
 	local clangformat = require("efmls-configs.formatters.clang_format")
+	local golangci_lint = require("efmls-configs.linters.golangci_lint")
+	-- local gci = require("efmls-configs.formatters.gci")
 	-- local htmlbeautifier = require("efmls-configs.formatters.htmlbeautifier")
 	-- local htmlhint = require("efmls-configs.linters.htmlhint")
 
@@ -220,6 +229,7 @@ local config = function()
 				css = { prettier_d },
 				c = { clangformat, cpplint },
 				cpp = { clangformat, cpplint },
+				go = { golangci_lint--[[ , gci ]] },
 			},
 		},
 	})
